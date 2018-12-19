@@ -2,122 +2,101 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Features
+ * Light weight
+ * High performance
+ * Pure Golang
+ * Supports single push, multiple push and broadcasting
+ * Supports one key to multiple subscribers (Configurable maximum subscribers count)
+ * Supports heartbeats (Application heartbeats, TCP, KeepAlive, HTTP long pulling)
+ * Supports authentication (Unauthenticated user can't subscribe)
+ * Supports multiple protocols (WebSocket，TCP，HTTP）
+ * Scalable architecture (Unlimited dynamic job and logic modules)
+ * Asynchronous push notification based on Kafka
 
-[Link to another page](./another-page.html).
+## Architecture
+![arch](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/arch.png)
 
-There should be whitespace between paragraphs.
+## Quick Start
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+### Build
+```
+    make build
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+### Run
 ```
+    make run
+    make stop
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+    // or
+    nohup target/logic -conf=target/logic.toml -region=sh -zone=sh001 deploy.env=dev weight=10 2>&1 > target/logic.log &
+    nohup target/comet -conf=target/comet.toml -region=sh -zone=sh001 deploy.env=dev weight=10 addrs=127.0.0.1 2>&1 > target/logic.log &
+    nohup target/job -conf=target/job.toml -region=sh -zone=sh001 deploy.env=dev 2>&1 > target/logic.log &
 
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+### Environment
 ```
+    env:
+    export REGION=sh
+    export ZONE=sh001
+    export DEPLOY_ENV=dev
 
+    supervisor:
+    environment=REGION=sh,ZONE=sh001,DEPLOY_ENV=dev
+
+    go flag:
+    -region=sh -zone=sh001 deploy.env=dev
 ```
-The final element.
-```
+### Configuration
+You can view the comments in target/comet.toml,logic.toml,job.toml to understand the meaning of the config.
+
+### Dependencies
+[Discovery](https://github.com/Bilibili/discovery)
+
+[Kafka](https://kafka.apache.org/quickstart)
+
+## Document
+[Protocol](https://github.com/Terry-Mao/goim/tree/v2.0/docs/protocol.png)
+
+[English](https://github.com/Terry-Mao/goim/tree/v2.0/README_en.md)
+
+[中文](https://github.com/Terry-Mao/goim/tree/v2.0/README_cn.md)
+
+## Examples
+Websocket: [Websocket Client Demo](https://github.com/Terry-Mao/goim/tree/master/examples/javascript)
+
+Android: [Android](https://github.com/roamdy/goim-sdk)
+
+iOS: [iOS](https://github.com/roamdy/goim-oc-sdk)
+
+## Benchmark
+![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
+
+### Benchmark Server
+| CPU | Memory | OS | Instance |
+| :---- | :---- | :---- | :---- |
+| Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz  | DDR3 32GB | Debian GNU/Linux 8 | 1 |
+
+### Benchmark Case
+* Online: 1,000,000
+* Duration: 15min
+* Push Speed: 40/s (broadcast room)
+* Push Message: {"test":1}
+* Received calc mode: 1s per times, total 30 times
+
+### Benchmark Resource
+* CPU: 2000%~2300%
+* Memory: 14GB
+* GC Pause: 504ms
+* Network: Incoming(450MBit/s), Outgoing(4.39GBit/s)
+
+### Benchmark Result
+* Received: 35,900,000/s
+
+[中文](https://github.com/Terry-Mao/goim/tree/v2.0/docs/benchmark_cn.md)
+
+[English](https://github.com/Terry-Mao/goim/tree/v2.0/docs/benchmark_en.md)
+
+## LICENSE
+goim is is distributed under the terms of the MIT License.
