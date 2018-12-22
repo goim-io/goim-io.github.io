@@ -24,10 +24,8 @@
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+        <a href="{{ site.github.tutorials_url}}" class="btn">Tutorials</a>
+        <a href="{{ site.github.releases_url }}" class="btn">Latest Releases</a>
       {% endif %}
     </header>
 
