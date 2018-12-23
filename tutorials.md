@@ -64,7 +64,7 @@ layout: default
 
 ## Deployments
 
-### supervisor
+### install supervisor
 
 ```
     apt-get install supervisor
