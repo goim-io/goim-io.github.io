@@ -53,6 +53,7 @@
                     case 8:
                         // auth reply ok
                         document.getElementById("status").innerHTML = "<color style='color:green'>ok<color>";
+                        appendMsg("receive: auth reply");
                         // send a heartbeat to server
                         heartbeat();
                         heartbeatInterval = setInterval(heartbeat, 30 * 1000);
@@ -60,7 +61,7 @@
                     case 3:
                         // receive a heartbeat from server
                         console.log("receive: heartbeat");
-                        appendMsg("receive: heartbeat from server");
+                        appendMsg("receive: heartbeat reply");
                     break;
                     default:
                         // batch message
@@ -95,7 +96,7 @@
                 headerView.setInt32(seqOffset, 1);
                 ws.send(headerBuf);
                 console.log("send: heartbeat");
-                appendMsg("send: heartbeat to server");
+                appendMsg("send: heartbeat");
             }
 
             function auth() {
@@ -110,7 +111,7 @@
                 headerView.setInt32(seqOffset, 1);
                 ws.send(mergeArrayBuffer(headerBuf, bodyBuf));
 
-                document.getElementById("session").innerHTML = "auth: " + token;
+                appendMsg("send: auth token: " + token);
             }
 
             function messageReceived(ver, body) {

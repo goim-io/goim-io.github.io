@@ -17,59 +17,6 @@ layout: default
 ## Architecture
 ![arch](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/arch.png)
 
-## Quick Start
-
-### Build
-```
-    make build
-```
-
-### Run
-```
-    make run
-    make stop
-
-    // or
-    nohup target/logic -conf=target/logic.toml -region=sh -zone=sh001 deploy.env=dev weight=10 2>&1 > target/logic.log &
-    nohup target/comet -conf=target/comet.toml -region=sh -zone=sh001 deploy.env=dev weight=10 addrs=127.0.0.1 2>&1 > target/logic.log &
-    nohup target/job -conf=target/job.toml -region=sh -zone=sh001 deploy.env=dev 2>&1 > target/logic.log &
-
-```
-### Environment
-```
-    env:
-    export REGION=sh
-    export ZONE=sh001
-    export DEPLOY_ENV=dev
-
-    supervisor:
-    environment=REGION=sh,ZONE=sh001,DEPLOY_ENV=dev
-
-    go flag:
-    -region=sh -zone=sh001 deploy.env=dev
-```
-### Configuration
-You can view the comments in target/comet.toml,logic.toml,job.toml to understand the meaning of the config.
-
-### Dependencies
-[Discovery](https://github.com/Bilibili/discovery)
-
-[Kafka](https://kafka.apache.org/quickstart)
-
-## Document
-[Protocol](https://github.com/Terry-Mao/goim/tree/v2.0/docs/protocol.png)
-
-[English](https://github.com/Terry-Mao/goim/tree/v2.0/README_en.md)
-
-[中文](https://github.com/Terry-Mao/goim/tree/v2.0/README_cn.md)
-
-## Examples
-Websocket: [Websocket Client Demo](https://github.com/Terry-Mao/goim/tree/master/examples/javascript)
-
-Android: [Android](https://github.com/roamdy/goim-sdk)
-
-iOS: [iOS](https://github.com/roamdy/goim-oc-sdk)
-
 ## Benchmark
 ![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
 
@@ -93,10 +40,8 @@ iOS: [iOS](https://github.com/roamdy/goim-oc-sdk)
 
 ### Benchmark Result
 * Received: 35,900,000/s
-
-[中文](https://github.com/Terry-Mao/goim/tree/v2.0/docs/benchmark_cn.md)
-
-[English](https://github.com/Terry-Mao/goim/tree/v2.0/docs/benchmark_en.md)
+* [English](/benchmark_en.html)
+* [中文](/benchmark_cn.html)
 
 ## LICENSE
 goim is is distributed under the terms of the MIT License.

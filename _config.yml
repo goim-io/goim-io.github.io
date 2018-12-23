@@ -3,7 +3,7 @@ description: goim is a im server writen by golang.
 github:
   is_project_page: true
   repository_url: https://github.com/Terry-Mao/goim
-  tutorials_url: https://github.com/Terry-Mao/goim/issues
+  tutorials_url: /tutorials.html
   releases_url: https://github.com/Terry-Mao/goim/releases
 google_analytics:
 theme: jekyll-theme-cayman
