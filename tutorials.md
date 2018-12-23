@@ -45,6 +45,17 @@ layout: default
 
     go flag:
     -region=sh -zone=sh001 deploy.env=dev
+
+    -region=sh (Configure to comet,logic,job)
+        avaliable region. or use REGION env variable, value: sh etc.
+    -zone=sh001 (Configure to comet,logic,job)
+        avaliable zone. or use ZONE env variable, value: sh001/sh002 etc.
+    -deploy.env (Configure to comet,logic,job)
+        deploy env. or use DEPLOY_ENV env variable, value: dev/fat1/uat/pre/prod etc.
+    -weight (Configure to comet,logic)
+        load balancing weight, or use WEIGHT env variable, value: 10 etc.
+    -addrs (Configure to comet)
+        public network IP address, or use ADDRS env variable, value: 127.0.0.1 etc.
 ```
 
 ## Configuration
