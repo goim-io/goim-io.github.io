@@ -2,24 +2,26 @@
 layout: default
 ---
 
-# Tutorials
+## Tutorials
 
-- [Quick Start](#Quick Start)
-- [Environment](#Environment)
-- [Configuration](#Configuration)
-- [Dependencies](#Dependencies)
-- [Deployments](#Deployments)
-- [Documents](#Documents)
-- [Examples](#Examples)
+- [Quick Start](#quick-start)
+- [Environment](#environment)
+- [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [Deployments](#deployments)
+- [Documents](#documents)
+- [Examples](#examples)
 
 ## Quick Start
 
 ### Build
+
 ```
     make build
 ```
 
 ### Run
+
 ```
     make run
     make stop
@@ -32,6 +34,7 @@ layout: default
 
 ## Environment
 
+```
     env:
     export REGION=sh
     export ZONE=sh001
@@ -42,9 +45,11 @@ layout: default
 
     go flag:
     -region=sh -zone=sh001 deploy.env=dev
+```
 
 ## Configuration
-### Log(github.com/golang/glog)
+
+### Log (github.com/golang/glog)
 
     -logtostderr=false
 	    Logs are written to standard error instead of to files.
@@ -58,14 +63,24 @@ layout: default
 	    default temporary directory.
 
 ## Dependencies
+
 [Discovery](https://github.com/Bilibili/discovery)
 
 [Kafka](https://kafka.apache.org/quickstart)
 
 ## Deployments
 
-### install supervisor
+### download goim
+```
+    cd $GOPATH/src 
+    git clone https://github.com/Terry-Mao/goim.git
+    cd goim
+    make build
+    mkdir -p /data/app/goim/
+    cp -f target/* /data/app/goim/
+```
 
+### install supervisor
 ```
     apt-get install supervisor
     mkdir -p /etc/supervisor/conf.d
@@ -73,7 +88,6 @@ layout: default
     # add supervisor config(comet.conf,logic.conf,job.conf)
     supervisorctl update
 ```
-
 ### comet.conf
 
 ```
@@ -95,6 +109,7 @@ stderr_logfile = /data/log/goim/comet_stderr.log
 stderr_logfile_backups = 10
 ```
 ### logic.conf
+
 ```
 [program:logic]
 name = logic
@@ -113,7 +128,9 @@ stdout_logfile_backups = 10
 stderr_logfile = /data/log/goim/logic_stderr.log
 stderr_logfile_backups = 10
 ```
+
 ### job.conf
+
 ```
 [program:job]
 name = job
