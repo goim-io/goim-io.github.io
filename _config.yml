@@ -2,8 +2,11 @@ title: GOIM
 description: goim is a im server writen by golang.
 github:
   is_project_page: true
+  owner_url: https://github.com/tonyboxes
+  owner_name: Tony
+  repository_name: Goim
   repository_url: https://github.com/Terry-Mao/goim
-  tutorials_url: /tutorials.html
+  tutorials_url: /tutorials
   releases_url: https://github.com/Terry-Mao/goim/releases
 google_analytics:
 theme: jekyll-theme-cayman

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Tutorials
+### Tutorials
 
 - [Quick Start](#quick-start)
 - [Environment](#environment)
@@ -12,27 +12,33 @@ layout: default
 - [Documents](#documents)
 - [Examples](#examples)
 
-## Quick Start
+### Quick Start
 
-### Build
-
-```
-    make build
-```
-
-### Run
+#### Build 
 
 ```
-    make run
-    make stop
+cd $GOPATH/src 
+mkdir -p github.com/Terry-Mao/
+cd github.com/Terry-Mao/
+git clone https://github.com/Terry-Mao/goim.git
+cd goim
 
-    // or
-    target/logic -conf=target/logic.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10
-    target/comet -conf=target/comet.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10 addrs=127.0.0.1
-    target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
+make build
 ```
 
-## Environment
+#### Run
+
+```
+make run
+make stop
+
+// or
+target/logic -conf=target/logic.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10
+target/comet -conf=target/comet.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10 addrs=127.0.0.1
+target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
+```
+
+### Environment
 
 ```
     env:
@@ -58,9 +64,9 @@ layout: default
         public network IP address, or use ADDRS env variable, value: 127.0.0.1 etc.
 ```
 
-## Configuration
+### Configuration
 
-### Log (github.com/golang/glog)
+#### Log (github.com/golang/glog)
 
     -logtostderr=false
 	    Logs are written to standard error instead of to files.
@@ -73,33 +79,29 @@ layout: default
 	    Log files will be written to this directory instead of the
 	    default temporary directory.
 
-## Dependencies
+### Dependencies
 
 [Discovery](https://github.com/Bilibili/discovery)
 
 [Kafka](https://kafka.apache.org/quickstart)
 
-## Deployments
+### Deployments
 
-### download goim
+#### download goim
 ```
-    cd $GOPATH/src 
-    git clone https://github.com/Terry-Mao/goim.git
-    cd goim
-    make build
-    mkdir -p /data/app/goim/
-    cp -f target/* /data/app/goim/
+mkdir -p /data/app/goim/
+cp -f target/* /data/app/goim/
 ```
 
-### install supervisor
+#### install supervisor
 ```
-    apt-get install supervisor
-    mkdir -p /etc/supervisor/conf.d
-    cd /etc/supervisor/conf.d
-    # add supervisor config(comet.conf,logic.conf,job.conf)
-    supervisorctl update
+apt-get install supervisor
+mkdir -p /etc/supervisor/conf.d
+cd /etc/supervisor/conf.d
+# add supervisor config(comet.conf,logic.conf,job.conf)
+supervisorctl update
 ```
-### comet.conf
+##### comet.conf
 
 ```
 [program:comet]
@@ -119,7 +121,7 @@ stdout_logfile_backups = 10
 stderr_logfile = /data/log/goim/comet_stderr.log
 stderr_logfile_backups = 10
 ```
-### logic.conf
+#### logic.conf
 
 ```
 [program:logic]
@@ -140,7 +142,7 @@ stderr_logfile = /data/log/goim/logic_stderr.log
 stderr_logfile_backups = 10
 ```
 
-### job.conf
+#### job.conf
 
 ```
 [program:job]
@@ -161,14 +163,12 @@ stderr_logfile = /data/log/goim/job_stderr.log
 stderr_logfile_backups = 10
 ```
 
-## Documents
-[Protocol](https://github.com/Terry-Mao/goim/tree/v2.0/docs/protocol.png)
+### Documents
+[Protocol](../docs/protocol.html)
 
-[English](https://github.com/Terry-Mao/goim/tree/v2.0/README_en.md)
+[Push API](../docs/push.html)
 
-[中文](https://github.com/Terry-Mao/goim/tree/v2.0/README_cn.md)
-
-## Examples
+### Examples
 Online Demo: [Online Demo](/demo)
 
 Websocket: [Websocket Client](https://github.com/Terry-Mao/goim/tree/master/examples/javascript)
