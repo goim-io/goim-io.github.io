@@ -21,8 +21,9 @@ layout: default
 ![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
 
 ### Benchmark Server
+
 | CPU | Memory | OS | Instance |
-| :---- | :---- | :---- | :---- |
+|:----|:-------|:---|:---------|
 | Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz  | DDR3 32GB | Debian GNU/Linux 8 | 1 |
 
 ### Benchmark Case
@@ -40,8 +41,8 @@ layout: default
 
 ### Benchmark Result
 * Received: 35,900,000/s
-* [English](/benchmark_en.html)
-* [中文](/benchmark_cn.html)
+* [English](/benchmarks/index.html)
+* [中文](/benchmarks/index_cn.html)
 
 ### Documents
 * [Protocol](../docs/protocol.html)

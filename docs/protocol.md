@@ -3,7 +3,7 @@ layout: default
 ---
 
 | Name             |      Length         | Remork |
-|------------------|:-------------------:|-------|
+|------------------|:-------------------:|--------|
 | Package Length   | 4 bytes             | header + body length   |
 | Header Length    | 2 bytes             | protocol header length |
 | Protocol Version | 2 bytes             | protocol version       |

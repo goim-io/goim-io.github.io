@@ -6,8 +6,9 @@ layout: default
 ![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
 
 ### 服务端配置
+
 | CPU | 内存 | 操作系统 | 数量 |
-| :---- | :---- | :---- | :---- |
+|:----|:-----|:---------|:-----|
 | Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz  | DDR3 32GB | Debian GNU/Linux 8 | 1 |
 
 ### 压测参数
