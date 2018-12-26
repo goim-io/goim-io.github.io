@@ -3,7 +3,7 @@ layout: default
 ---
 
 ## 压测图表
-![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
+![benchmark](benchmark.jpg)
 
 ### 服务端配置
 
@@ -29,10 +29,10 @@ layout: default
 * 推送到达: 3590万/秒左右;
 
 ## comet模块
-![benchmark-comet](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-comet.jpg)
+![benchmark-comet](benchmark-comet.jpg)
 
 ## 流量
-![benchmark-flow](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-flow.jpg)
+![benchmark-flow](benchmark-flow.jpg)
 
 ## heap信息(包含GC)
-![benchmark-flow](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-heap.jpg)
+![benchmark-flow](benchmark-heap.jpg)

@@ -3,7 +3,7 @@ layout: default
 ---
 
 ## Benchmark Chart
-![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
+![benchmark](benchmark.jpg)
 
 ### Benchmark Server
 
@@ -29,10 +29,10 @@ layout: default
 * Received: 35,900,000/s
 
 ## Comet
-![benchmark-comet](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-comet.jpg)
+![benchmark-comet](benchmark-comet.jpg)
 
 ## Network traffic
-![benchmark-flow](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-flow.jpg)
+![benchmark-flow](benchmark-flow.jpg)
 
 ## Heap (include GC)
-![benchmark-flow](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark-heap.jpg)
+![benchmark-flow](benchmark-heap.jpg)

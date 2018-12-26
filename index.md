@@ -15,10 +15,10 @@ layout: default
  * Asynchronous push notification based on Kafka
 
 ## Architecture
-![arch](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/arch.png)
+![arch](docs/arch.png)
 
 ## Benchmark
-![benchmark](https://raw.githubusercontent.com/Terry-Mao/goim/v2.0/docs/benchmark.jpg)
+![benchmark](benchmarks/benchmark.jpg)
 
 ### Benchmark Server
 
@@ -41,15 +41,15 @@ layout: default
 
 ### Benchmark Result
 * Received: 35,900,000/s
-* [English](/benchmarks/index.html)
-* [中文](/benchmarks/index_cn.html)
+* [English](benchmarks/index.html)
+* [中文](benchmarks/index_cn.html)
 
 ### Documents
-* [Protocol](../docs/protocol.html)
-* [Push API](../docs/push.html)
+* [Protocol](docs/protocol.html)
+* [Push API](docs/push.html)
 
 ### Examples
-* Online Demo: [Online Demo](/demo)
+* Online Example: [Online Example](examples/)
 * Websocket: [Websocket Client](https://github.com/Terry-Mao/goim/tree/master/examples/javascript)
 * Android: [Android Client](https://github.com/roamdy/goim-sdk)
 * iOS: [iOS Client](https://github.com/roamdy/goim-oc-sdk)
