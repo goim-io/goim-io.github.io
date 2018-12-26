@@ -27,6 +27,8 @@ make build
 
 #### Run
 
+If it fails, please check the logs for debugging.  
+
 ```
 make run
 make stop
@@ -38,6 +40,8 @@ target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
 ```
 
 ### Configuration
+
+You can view the comments in target/comet.toml,logic.toml,job.toml to understand the meaning of the config.
 
 #### Environment
 
@@ -80,11 +84,14 @@ target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
 
 ### Dependencies
 
-[Discovery](https://github.com/Bilibili/discovery)
+Please follow the official quick start.
 
-[Kafka](https://kafka.apache.org/quickstart)
+* [Discovery](https://github.com/Bilibili/discovery)
+* [Kafka](https://kafka.apache.org/quickstart)
 
 ### Deployments
+
+Install comet/logic/job modules and use Supervisor management (You might need to change the configuration files based on your servers).
 
 #### download goim
 ```

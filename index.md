@@ -2,6 +2,9 @@
 layout: default
 ---
 
+## Introduction
+GOIM is a IM and push notification server cluster.
+
 ## Features
  * Light weight
  * High performance
