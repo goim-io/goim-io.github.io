@@ -9,5 +9,5 @@ github:
   repository_url: https://github.com/Terry-Mao/goim
   tutorials_url: /tutorials
   releases_url: https://github.com/Terry-Mao/goim/releases
-google_analytics:
+google_analytics: UA-131412507-1
 theme: jekyll-theme-cayman
