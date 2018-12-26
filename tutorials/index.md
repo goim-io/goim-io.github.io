@@ -5,7 +5,6 @@ layout: default
 ### Tutorials
 
 - [Quick Start](#quick-start)
-- [Environment](#environment)
 - [Configuration](#configuration)
 - [Dependencies](#dependencies)
 - [Deployments](#deployments)
@@ -38,7 +37,9 @@ target/comet -conf=target/comet.toml -region=sh -zone=sh001 -deploy.env=dev -wei
 target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
 ```
 
-### Environment
+### Configuration
+
+#### Environment
 
 ```
     env:
@@ -63,8 +64,6 @@ target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
     -addrs (Configure to comet)
         public network IP address, or use ADDRS env variable, value: 127.0.0.1 etc.
 ```
-
-### Configuration
 
 #### Log (github.com/golang/glog)
 
