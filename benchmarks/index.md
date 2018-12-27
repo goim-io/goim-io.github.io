@@ -3,7 +3,7 @@ layout: default
 ---
 
 ## Benchmark Chart
-![benchmark](benchmark.jpg)
+![benchmark](/benchmarks/benchmark.jpg)
 
 ### Benchmark Server
 
@@ -29,10 +29,10 @@ layout: default
 * Received: 35,900,000/s
 
 ## Comet
-![benchmark-comet](benchmark-comet.jpg)
+![benchmark-comet](/benchmarks/benchmark-comet.jpg)
 
 ## Network traffic
-![benchmark-flow](benchmark-flow.jpg)
+![benchmark-flow](/benchmarks/benchmark-flow.jpg)
 
 ## Heap (include GC)
-![benchmark-flow](benchmark-heap.jpg)
+![benchmark-flow](/benchmarks/benchmark-heap.jpg)
