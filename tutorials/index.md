@@ -27,16 +27,18 @@ make build
 
 #### Run
 
-If it fails, please check the logs for debugging.  
-
 ```
 make run
 make stop
 
-// or
+// Or use
 target/logic -conf=target/logic.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10
 target/comet -conf=target/comet.toml -region=sh -zone=sh001 -deploy.env=dev -weight=10 addrs=127.0.0.1
 target/job -conf=target/job.toml -region=sh -zone=sh001 -deploy.env=dev
+
+// View the running process
+// If no process is running, please check the logs for debugging.  
+ps -ef|grep target
 ```
 
 ### Configuration
