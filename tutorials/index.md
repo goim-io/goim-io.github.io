@@ -174,7 +174,7 @@ stderr_logfile_backups = 10
 * [Push API](../docs/push.html)
 
 ### Examples
-* Online Example: [Online Example](examples/)
+* Online Example: [Online Example](/examples)
 * Websocket: [Websocket Client](https://github.com/Terry-Mao/goim/tree/master/examples/javascript)
 * Android: [Android Client](https://github.com/roamdy/goim-sdk)
 * iOS: [iOS Client](https://github.com/roamdy/goim-oc-sdk)
