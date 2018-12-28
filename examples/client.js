@@ -57,25 +57,32 @@
                         // send a heartbeat to server
                         heartbeat();
                         heartbeatInterval = setInterval(heartbeat, 30 * 1000);
-                    break;
+                        break;
                     case 3:
                         // receive a heartbeat from server
                         console.log("receive: heartbeat");
                         appendMsg("receive: heartbeat reply");
-                    break;
-                    default:
+                        break;
+                    case 9:
                         // batch message
-                        for (var offset=0; offset<data.byteLength; offset+=packetLen) {
+                        for (var offset=rawHeaderLen; offset<data.byteLength; offset+=packetLen) {
                             // parse
                             var packetLen = dataView.getInt32(offset);
                             var headerLen = dataView.getInt16(offset+headerOffset);
                             var ver = dataView.getInt16(offset+verOffset);
+                            var op = dataView.getInt32(offset+opOffset);
+                            var seq = dataView.getInt32(offset+seqOffset);
                             var msgBody = textDecoder.decode(data.slice(offset+headerLen, offset+packetLen));
                             // callback
                             messageReceived(ver, msgBody);
                             appendMsg("receive: ver=" + ver + " op=" + op + " seq=" + seq + " message=" + msgBody);
                         }
-                    break;
+                        break;
+                    default:
+                        var msgBody = textDecoder.decode(data.slice(headerLen, packetLen));
+                        messageReceived(ver, msgBody);
+                        appendMsg("receive: ver=" + ver + " op=" + op + " seq=" + seq + " message=" + msgBody);
+                        break
                 }
             }
 

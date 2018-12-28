@@ -26,4 +26,5 @@ layout: default
 | OpDisconnectReply = 6 | connection disconnect reply |
 | OpAuth = 7 | auth connnect |
 | OpAuthReply = 8 | auth connect reply |
+| OpRawBatch = 9 | batch message for websocket |
 
