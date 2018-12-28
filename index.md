@@ -18,10 +18,10 @@ GOIM is a IM and push notification server cluster.
  * Asynchronous push notification based on Kafka
 
 ## Architecture
-![arch](docs/arch.png)
+![arch](/docs/arch.png)
 
 ## Benchmark
-![benchmark](benchmarks/benchmark.jpg)
+![benchmark](/benchmarks/benchmark.jpg)
 
 ### Benchmark Server
 
@@ -44,12 +44,13 @@ GOIM is a IM and push notification server cluster.
 
 ### Benchmark Result
 * Received: 35,900,000/s
-* [English](benchmarks/index.html)
-* [中文](benchmarks/index_cn.html)
+* [English](/benchmarks/index.html)
+* [中文](/benchmarks/index_cn.html)
 
 ### Documents
-* [Protocol](docs/protocol.html)
-* [Push API](docs/push.html)
+* [Protocol](/docs/protocol.html)
+* [Push API](/docs/push.html)
+* [Cloud Infrastructure](/docs/cloud.html)
 
 ### Examples
 * Online Example: [Online Example](examples/)

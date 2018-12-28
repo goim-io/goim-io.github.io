@@ -3,7 +3,7 @@ layout: default
 ---
 
 ## 压测图表
-![benchmark](benchmark.jpg)
+![benchmark](/benchmarks/benchmark.jpg)
 
 ### 服务端配置
 
@@ -29,10 +29,10 @@ layout: default
 * 推送到达: 3590万/秒左右;
 
 ## comet模块
-![benchmark-comet](benchmark-comet.jpg)
+![benchmark-comet](/benchmarks/benchmark-comet.jpg)
 
 ## 流量
-![benchmark-flow](benchmark-flow.jpg)
+![benchmark-flow](/benchmarks/benchmark-flow.jpg)
 
 ## heap信息(包含GC)
-![benchmark-flow](benchmark-heap.jpg)
+![benchmark-flow](/benchmarks/benchmark-heap.jpg)

@@ -174,6 +174,7 @@ stderr_logfile_backups = 10
 ### Documents
 * [Protocol](../docs/protocol.html)
 * [Push API](../docs/push.html)
+* [Cloud Infrastructure](/docs/cloud.html)
 
 ### Examples
 * Online Example: [Online Example](/examples)
